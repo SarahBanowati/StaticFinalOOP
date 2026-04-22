@@ -8,6 +8,9 @@ class Pengunjung {
         self::$jumlah++;
     }
 
+    public static function reset() {
+        self::$jumlah = 0;
+    }
 }
 
 // Instansiasi objek
@@ -16,6 +19,9 @@ $p2 = new Pengunjung();
 $p3 = new Pengunjung();
 $p4 = new Pengunjung();
 $p5 = new Pengunjung();
+
+// Reset jumlah
+Pengunjung::reset();
 
 // Menampilkan hasil
 echo "Jumlah Pengunjung: " . Pengunjung::$jumlah;
